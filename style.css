@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.bar-left {
+    display: flex;
+    gap: 1rem;
+}
+
+.bar-right {
+    display: flex;
+    gap: 2rem;
+}
+
+@media only screen and (max-width:1000px) {}
