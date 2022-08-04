@@ -99,3 +99,15 @@
 	width: 20px;
 	height: 20px;
 }
+
+.article-img {
+	min-width: 250px;
+	min-height: 240px;
+	object-fit: cover;
+}
+
+.article {
+	width: 250px;
+	height: 240px;
+	overflow: hidden;
+}
