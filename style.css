@@ -111,3 +111,46 @@
 	height: 240px;
 	overflow: hidden;
 }
+
+.logo-travel-tour {
+	width: 30px;
+	height: 30px;
+}
+
+.award {
+	width: auto;
+	height: 60px;
+}
+
+.logo-social {
+	width: 15px;
+	height: 15px;
+}
+
+.country {
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+	position: relative;
+}
+
+.country-img {
+	min-width: 80px;
+	min-height: 80px;
+	object-fit: cover;
+	filter: brightness(0.7);
+}
+
+.country-text {
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.countries {
+	display: grid;
+	grid-template-columns: repeat(3, 80px);
+	gap: 1.5rem;
+}
