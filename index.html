@@ -4,76 +4,67 @@
 		<meta charset="UTF-8" />
 		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script
+			src="https://kit.fontawesome.com/a779460b83.js"
+			crossorigin="anonymous"
+		></script>
 		<title>Travel Tour</title>
 	</head>
 
 	<body class="bg-pink-200">
-		<div id="app"></div>
-		<div class="mobile-size">
-			<div class="bg-black flex p-8 justify-between">
-				<div class="bar-left items-center">
-					<img class="logo-social" src="./assets/phone.png" alt="tel" />
-					<div class="text-white">0812345678</div>
-					<img class="logo-social" src="./assets/email.png" alt="email" />
-					<div class="text-white">Contact@TravelTour.com</div>
-				</div>
-				<div class="bar-right">
-					<div class="flex gap-6">
-						<img
-							class="logo-social"
-							src="./assets/logo-facebook-blue.png"
-							alt="facebook"
-						/>
-						<img
-							class="logo-social"
-							src="./assets/logo-flickr-blue.png"
-							alt="flickr"
-						/>
-						<img
-							class="logo-social"
-							src="./assets/logo-google-blue.png"
-							alt="google plus"
-						/>
-						<img
-							class="logo-social"
-							src="./assets/logo-twitter-blue.png"
-							alt="twitter"
-						/>
-					</div>
-					<div class="flex gap-2">
-						<div class="text-white">login</div>
-						<div class="text-white">signup</div>
-					</div>
-				</div>
-			</div>
-			<div class="bg-black">
-				<div class="p-7 h-20 items-center flex gap-4">
-					<img
-						src="./assets/airplane-logo.png"
-						alt="travel-tour"
-						class="logo-travel-tour"
-					/>
-					<div class="flex">
-						<div class="text-blue-500">TRAVEL</div>
-						<div class="text-red-100">TOUR</div>
-					</div>
-					<div class="menu flex"></div>
-				</div>
-			</div>
-		</div>
 		<div class="suggest-trip trip-set">
 			<img
 				class="suggest-trip-img"
 				src="./assets/switzerland.jpeg"
 				alt="switzerland"
 			/>
+			<div class="top-bar">
+				<div
+					class="top-bar-bg flex black-background justify-between adjust-border-content-nav"
+				>
+					<div class="bar-left items-center">
+						<img class="logo-social" src="./assets/phone.png" alt="tel" />
+						<div class="text-white">0812345678</div>
+						<img class="logo-social" src="./assets/email.png" alt="email" />
+						<div class="text-white">Contact@TravelTour.com</div>
+					</div>
+					<div class="bar-right items-center">
+						<div class="flex gap-6">
+							<i class="fa-brands fa-facebook-f logo-social"></i>
+							<i class="fa-brands fa-flickr logo-social"></i>
+							<i class="fa-brands fa-google-plus-g logo-social"></i>
+							<i class="fa-brands fa-twitter logo-social"></i>
+						</div>
+						<div class="flex gap-3 items-center">
+							<i class="fa-solid fa-unlock-keyhole logo-social"></i>
+							<div class="text-white">login</div>
+							<i class="fa-solid fa-user logo-social"></i>
+							<div class="text-white">signup</div>
+						</div>
+					</div>
+				</div>
+				<div class="top-bar-bg adjust-border-content-nav sticky-nav">
+					<div class="h-16 items-center flex gap-4">
+						<img
+							src="./assets/airplane-logo.png"
+							alt="travel-tour"
+							class="logo-travel-tour"
+						/>
+						<div class="flex">
+							<div class="text-blue-500">TRAVEL</div>
+							<div class="text-white">TOUR</div>
+						</div>
+						<div class="menu flex"></div>
+					</div>
+				</div>
+			</div>
 			<div class="suggest-trip suggest-text">
 				<h1 class="text-7xl">this is trip</h1>
 				<h1 class="text-3xl">what you need to know before you go</h1>
 				<button class="button-to-detail">see more</button>
 			</div>
 		</div>
-		<div class="good-points">
+		<div class="good-points adjust-border-content light-blue-background">
 			<div class="good-point">
 				<img
 					class="good-point-img"
@@ -119,16 +110,74 @@
 				</div>
 			</div>
 		</div>
-		<div class="package-tour">
-			<div class="search-package">
-				<form></form>
-			</div>
-			<div class="popular-package p-16">
-				<div class="flex gap-2 items-baseline">
-					<div class="text-3xl mb-6">Popular Tour Packages</div>
-					<button class="text-blue-600">/ View All Tours</button>
+		<div class="package-tour relative">
+			<img
+				class="package-tour-bg"
+				src="./assets/switzerland.jpeg"
+				alt="switzerland"
+			/>
+			<div
+				class="search-package flex search-bg gap-2 adjust-border-content justify-between"
+			>
+				<div class="search-field search-keyword relative">
+					<label for="keyword" class="lb-search">Keywords</label>
+					<input type="search" class="inp-search-field" />
+					<i class="fa-solid fa-magnifying-glass search-logo"></i>
 				</div>
-				<div class="packages flex justify-center gap-8">
+				<div class="search-field search-activity">
+					<label for="activity" class="lb-search">Activity</label>
+					<select id="activity" name="activity" class="inp-search-field">
+						<option value="any">Any</option>
+						<option value="city">City Tours</option>
+						<option value="caltural-thematic">Caltural & Thematic Tours</option>
+						<option value="family">Family Friendly Tours</option>
+						<option value="holiday">Holiday & Seasonal Tours</option>
+						<option value="Luxury">Indulgence & Luxury Tours</option>
+						<option value="outdoor">Outdoor Tours</option>
+						<option value="Relaxation">Relaxation Tours</option>
+						<option value="wild">Wild & Adventure Tours</option>
+					</select>
+				</div>
+				<div class="search-field search-destination">
+					<label for="destination" class="lb-search">Destination</label>
+					<select id="destination" name="destination" class="inp-search-field">
+						<option value="any">Any</option>
+						<option value="affrica">Affrica</option>
+						<option value="america">America</option>
+						<option value="asia">Asia</option>
+						<option value="eastern">Eastern Europe</option>
+						<option value="europe">Europe</option>
+						<option value="south">South America</option>
+					</select>
+				</div>
+				<div class="search-field search-duration">
+					<label for="duration" class="lb-search">Duration</label>
+					<select id="duration" name="duration" class="inp-search-field">
+						<option value="any">Any</option>
+						<option value="one-day">1 Day Tour</option>
+						<option value="two-day">2-4 Day Tour</option>
+						<option value="five-day">5-7 Day Tour</option>
+						<option value="seven-day">7+ Day Tour</option>
+					</select>
+				</div>
+				<div class="search-field search-date">
+					<label for="date" class="lb-search">Date</label>
+					<input type="date" class="inp-search-field inp-date" />
+				</div>
+				<div class="search-field search-button relative">
+					<input
+						type="submit"
+						value="SEARCH"
+						class="inp-search-field btn-search"
+					/>
+				</div>
+			</div>
+			<div class="popular-package adjust-border-content">
+				<div class="flex gap-6 items-baseline bottom-topic">
+					<div class="text-3xl text-white">Popular Tour Packages</div>
+					<button class="text-blue-400">/ View All Tours</button>
+				</div>
+				<div class="packages flex justify-between gap-8">
 					<div class="package">
 						<img
 							src="./assets/palace.jpeg"
@@ -226,10 +275,13 @@
 				</div>
 			</div>
 		</div>
-		<div class="popular-destinations bg-white p-12">
-			<div class="flex gap-2 items-baseline">
-				<div class="text-3xl mb-6">Popular Destinations</div>
-				<button class="text-blue-600">/ View All Destinations</button>
+		<div class="popular-destinations bg-white adjust-border-content">
+			<div class="flex gap-4 items-center bottom-topic">
+				<i class="fa-solid fa-map-pin topic-logo"></i>
+				<div class="flex items-baseline gap-4">
+					<div class="text-3xl">Popular Destinations</div>
+					<button class="text-blue-600">/ View All Destinations</button>
+				</div>
 			</div>
 			<div class="text-gray-400">
 				Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget
@@ -319,48 +371,58 @@
 				</div>
 			</div>
 		</div>
-		<div class="flex bg-white p-20 gap-2 justify-between">
+		<div class="flex bg-white adjust-border-content gap-2 justify-between">
 			<div class="browse-tour">
-				<div class="flex gap-2 items-center">
-					<div class="logo">logo</div>
+				<div class="flex gap-4 items-center bottom-topic">
+					<i class="fa-solid fa-sliders topic-logo"></i>
 					<div class="text-2xl">Browse Tours By Activity</div>
 				</div>
-				<div class="flex gap-20">
-					<div class="grid justify-items-start">
-						<button class="text-blue-400">Outdoor Activites</button>
-						<button class="text-blue-400">Cultural & Thematic Tours</button>
-						<button class="text-blue-400">Family Friendly Tours</button>
-						<button class="text-blue-400">Holiday & Seasonal Tours</button>
-					</div>
-					<div class="grid justify-items-start">
-						<button class="text-blue-400">City Tours</button>
-						<button class="text-blue-400">Indulgence & Luxury Tours</button>
-						<button class="text-blue-400">Relaxation Tours</button>
-						<button class="text-blue-400">Wild & Adventure Tours</button>
-					</div>
+				<div class="justify-items-start activities">
+					<button class="text-blue-400">Outdoor Activites</button>
+					<button class="text-blue-400">City Tours</button>
+					<button class="text-blue-400">Cultural & Thematic Tours</button>
+					<button class="text-blue-400">Indulgence & Luxury Tours</button>
+					<button class="text-blue-400">Family Friendly Tours</button>
+					<button class="text-blue-400">Relaxation Tours</button>
+					<button class="text-blue-400">Holiday & Seasonal Tours</button>
+					<button class="text-blue-400">Wild & Adventure Tours</button>
 				</div>
 			</div>
-			<div class="letter">
-				<div class="flex gap-2 items-center">
-					<div class="logo">logo</div>
+			<div class="letter w-5/12">
+				<div class="flex gap-4 items-center bottom-topic">
+					<i class="fa-regular fa-envelope topic-logo"></i>
 					<div class="text-2xl">Newletter</div>
 				</div>
-				<div class="text-gray-400 mb-4">Subscribe for updates & promotions</div>
-				<input
-					type="email"
-					placeholder="Your Email Address"
-					class="bg-gray-200 p-4 rounded-full w-7/12"
-				/>
-				<button class="p-4 bg-blue-400 rounded-full text-white">
-					SUBSCRIBE
-				</button>
-				<div class="flex"></div>
+				<div class="text-gray-400 mb-6">Subscribe for updates & promotions</div>
+				<div class="flex gap-4">
+					<input
+						type="email"
+						placeholder="Your Email Address"
+						class="bg-gray-200 p-4 rounded-full w-7/12"
+					/>
+					<button class="p-4 bg-blue-400 rounded-full text-white">
+						SUBSCRIBE
+					</button>
+				</div>
+				<div class="flex gap-6 mt-5 items-baseline">
+					<i class="fa-solid fa-envelope logo-social letter-social"></i>
+					<i class="fa-brands fa-facebook-f logo-social letter-social"></i>
+					<i class="fa-brands fa-google-plus-g logo-social letter-social"></i>
+					<i class="fa-brands fa-linkedin-in logo-social letter-social"></i>
+					<i class="fa-brands fa-pinterest-p logo-social letter-social"></i>
+					<i class="fa-brands fa-skype logo-social letter-social"></i>
+					<i class="fa-brands fa-twitter logo-social letter-social"></i>
+				</div>
 			</div>
 		</div>
 		<div class="discount relative">
-			<div class="w-6/12 right-1 p-4">
-				<div>Discount 10-30% Off</div>
-				<div>
+			<div class="discount-bg-img"></div>
+			<div class="discount-field w-6/12 right-1 p-4">
+				<div class="text-5xl bottom-topic flex gap-2 font-bold">
+					<div class="text-white">Discount</div>
+					<div class="text-yellow-500">10-30% Off</div>
+				</div>
+				<div class="bottom-topic text-white">
 					Curabitur blandit tempus porttitor. Curabitur blandit tempus
 					porttitor. Maecenas faucibus mollis interdum. Duis mollis, est non
 					commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
@@ -371,13 +433,22 @@
 				</button>
 			</div>
 		</div>
-		<div class="travel-articles bg-white p-12">
-			<div class="flex gap-2 items-baseline mb-8">
-				<div class="text-3xl">Travel Articles</div>
-				<button class="text-blue-600">/ See All Articles</button>
+		<div class="travel-articles bg-white adjust-border-content">
+			<div class="flex gap-4 items-center bottom-topic">
+				<i class="fa-regular fa-lightbulb topic-logo"></i>
+				<div class="flex items-baseline gap-4">
+					<div class="text-3xl">Travel Articles</div>
+					<button class="text-blue-600">/ See All Articles</button>
+				</div>
+				<div id="test-two"></div>
 			</div>
 			<div class="flex gap-8 justify-center">
-				<div class="article">
+				<div
+					class="article"
+					id="test"
+					data-trip="yoyo"
+					onmouseover="testHover(this)"
+				>
 					<img
 						class="article-img items-center"
 						src="./assets/pics-portrait2.jpeg"
@@ -400,27 +471,33 @@
 				</div>
 			</div>
 		</div>
-		<div class="flex bg-blue-400 gap-8 justify-flex-start w-full">
-			<div class="book-with-us bg-blue-700 p-8 text-blue-100 w-3/12 text-right">
-				Why Book With Us?
-			</div>
-			<div class="flex gap-12 p-4">
-				<div class="flex items-center gap-4 w-6/12">
-					<div>logo</div>
+		<div class="my-strengths gap-8 justify-flex-start w-full">
+			<div class="book-with-us w-4/12">Why Book With Us?</div>
+			<div class="my-strengths p-4">
+				<div class="strength">
+					<img
+						src="./assets/like.png"
+						alt="recommend"
+						class="logo-travel-tour"
+					/>
 					<div>
 						<div class="text-white font-bold">40,000+ CUSTOMERS</div>
 						<div class="text-gray-300">Morbi leo risus, porta ac</div>
 					</div>
 				</div>
-				<div class="flex items-center gap-4 w-6/12">
-					<div>logo</div>
+				<div class="strength">
+					<img src="./assets/medal.png" alt="award" class="logo-travel-tour" />
 					<div>
 						<div class="text-white font-bold">AWARD WINNING</div>
 						<div class="text-gray-300">Morbi leo risus, porta ac</div>
 					</div>
 				</div>
-				<div class="flex items-center gap-4 w-6/12">
-					<div>logo</div>
+				<div class="strength">
+					<img
+						src="./assets/padlock.png"
+						alt="secure"
+						class="logo-travel-tour"
+					/>
 					<div>
 						<div class="text-white font-bold">SECURE PAYMENT</div>
 						<div class="text-gray-300">Morbi leo risus, porta ac</div>
@@ -428,9 +505,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="flex justify-center bg-gray-900 w-full gap-8">
+		<div class="bottom-part gray-background">
 			<div class="w-3/12">
-				<div class="p-7 items-center flex gap-4">
+				<div class="items-center flex gap-4 bottom-topic">
 					<img
 						src="./assets/airplane-logo.png"
 						alt="travel-tour"
@@ -438,84 +515,79 @@
 					/>
 					<div class="flex">
 						<div class="text-blue-500">TRAVEL</div>
-						<div class="text-red-100">TOUR</div>
+						<div class="text-white">TOUR</div>
 					</div>
 				</div>
 				<div class="text-gray-500">
 					Far far away, behind the word mountains, far from the countries
 					Vokalia and Consonantia, there live the blind texts.
 				</div>
-				<div class="awards text-white flex gap-8">
+				<div class="awards text-white flex gap-8 mt-8">
 					<img src="./assets/award-1.png" class="award" alt="award-1" />
 					<img src="./assets/award-2.png" class="award" alt="award-2" />
 				</div>
 			</div>
-			<div class="w-3/12 text-white p-7">
-				<div class="text-sm font-bold">TOP DESTINATIONS</div>
+			<div class="w-3/12 text-white">
+				<div class="text-sm font-bold bottom-topic">TOP DESTINATIONS</div>
 				<div class="countries">
-					<div class="country">
-						<img class="country-img items-center" src="./assets/palace.jpeg" />
-						<div class="country-text">Affrica</div>
+					<div class="country-field">
+						<div class="country">
+							<img class="country-img" src="./assets/palace.jpeg" />
+							<div class="country-text">Affrica</div>
+						</div>
 					</div>
-					<div class="country">
-						<img class="country-img items-center" src="./assets/palace.jpeg" />
-						<div class="country-text">America</div>
+					<div class="country-field">
+						<div class="country">
+							<img class="country-img" src="./assets/palace.jpeg" />
+							<div class="country-text">America</div>
+						</div>
 					</div>
-					<div class="country">
-						<img class="country-img items-center" src="./assets/palace.jpeg" />
-						<div class="country-text">Asia</div>
+					<div class="country-field">
+						<div class="country">
+							<img class="country-img" src="./assets/palace.jpeg" />
+							<div class="country-text-asia">Asia</div>
+						</div>
 					</div>
-					<div class="country">
-						<img class="country-img items-center" src="./assets/palace.jpeg" />
-						<div class="country-text">Estern Europe</div>
+					<div class="country-field">
+						<div class="country">
+							<img class="country-img" src="./assets/palace.jpeg" />
+							<div class="country-text">Eastern Europe</div>
+						</div>
 					</div>
-					<div class="country">
-						<img class="country-img items-center" src="./assets/palace.jpeg" />
-						<div class="country-text">Europe</div>
+					<div class="country-field">
+						<div class="country">
+							<img class="country-img" src="./assets/palace.jpeg" />
+							<div class="country-text">Europe</div>
+						</div>
 					</div>
-					<div class="country">
-						<img class="country-img items-center" src="./assets/palace.jpeg" />
-						<div class="country-text">South America</div>
+					<div class="country-field">
+						<div class="country">
+							<img class="country-img" src="./assets/palace.jpeg" />
+							<div class="country-text">South America</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="w-4/12 text-white p-7">
-				<div class="text-sm font-bold">CONTACT INFO</div>
+			<div class="w-3/12 text-white">
+				<div class="text-sm font-bold bottom-topic">CONTACT INFO</div>
 				<div class="contacts text-gray-400">
 					<div>Address : 12 Main Street Pt. London</div>
 					<div>Phone : +44 3656 4567</div>
 					<div>contact@traveltourtheme.com</div>
 				</div>
-				<div class="socials flex gap-6">
-					<img
-						class="logo-social"
-						src="./assets/logo-facebook-white.png"
-						alt="facebook"
-					/>
-					<img
-						class="logo-social"
-						src="./assets/logo-twitter-white.png"
-						alt="twitter"
-					/>
-					<img
-						class="logo-social"
-						src="./assets/logo-linkedin-white.png"
+				<div class="socials flex gap-6 mt-6">
+					<i class="fa-brands fa-facebook-f logo-social bottom-social"></i>
+					<i class="fa-brands fa-twitter logo-social bottom-social"></i>
+					<i
+						class="fa-brands fa-linkedin-in logo-social bottom-social"
 						alt="linked in"
-					/>
-					<img
-						class="logo-social"
-						src="./assets/logo-pinterest-white.png"
-						alt="pinterest"
-					/>
-					<img
-						class="logo-social"
-						src="./assets/logo-vimeo-white.png"
-						alt="vimeo"
-					/>
+					></i>
+					<i class="fa-brands fa-pinterest-p logo-social bottom-social"></i>
+					<i class="fa-brands fa-vimeo-v"></i>
 				</div>
 			</div>
 		</div>
-		<div class="copyright bg-black p-12 text-center text-gray-400">
+		<div class="copyright black-background p-10 text-center text-gray-400">
 			COPYRIGHT 2020 GOODLAYERS, ALL RIGHT RESERVED
 		</div>
 		<script type="module" src="/main.js"></script>
