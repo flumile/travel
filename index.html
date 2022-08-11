@@ -13,16 +13,14 @@
 
 	<body class="bg-pink-200">
 		<div class="suggest-trip trip-set">
-			<div class="suggest-trip-bg"></div>
-			<div class="suggest-trip-filter-bg"></div>
 			<div class="top-bar">
 				<div
 					class="top-bar-bg flex black-background justify-between adjust-border-content-nav"
 				>
 					<div class="bar-left items-center">
-						<img class="logo-social" src="./assets/phone.png" alt="tel" />
+						<i class="fa-solid fa-phone navbar-logo"></i>
 						<div class="text-white">0812345678</div>
-						<img class="logo-social" src="./assets/email.png" alt="email" />
+						<i class="fa-regular fa-envelope navbar-logo"></i>
 						<div class="text-white">Contact@TravelTour.com</div>
 					</div>
 					<div class="bar-right items-center">
@@ -55,10 +53,43 @@
 					</div>
 				</div>
 			</div>
-			<div class="suggest-trip suggest-text">
-				<h1 class="text-7xl">this is trip</h1>
-				<h1 class="text-3xl">what you need to know before you go</h1>
-				<button class="button-to-detail">see more</button>
+			<div class="carousel w-full h-full">
+				<div class="carousel-item w-full h-full">
+					<div class="suggest-trip-bg fade"></div>
+					<div class="suggest-trip-filter-bg"></div>
+					<div class="suggest-trip suggest-text">
+						<h1 class="text-7xl">this is trip 1</h1>
+						<h1 class="text-3xl">what you need to know before you go</h1>
+						<button class="button-to-detail">see more</button>
+					</div>
+				</div>
+				<div class="carousel-item w-full h-full">
+					<div class="suggest-trip-bg fade"></div>
+					<div class="suggest-trip-filter-bg"></div>
+					<div class="suggest-trip suggest-text">
+						<h1 class="text-7xl">this is trip 2</h1>
+						<h1 class="text-3xl">what you need to know before you go2</h1>
+						<button class="button-to-detail">see more</button>
+					</div>
+				</div>
+				<div class="carousel-item carousel-current-item w-full h-full">
+					<div class="suggest-trip-bg fade"></div>
+					<div class="suggest-trip-filter-bg"></div>
+					<div class="suggest-trip suggest-text">
+						<h1 class="text-7xl">this is trip 3</h1>
+						<h1 class="text-3xl">what you need to know before you go3</h1>
+						<button class="button-to-detail">see more</button>
+					</div>
+				</div>
+				<div class="carousel-slice">
+					<div class="fa-solid fa-chevron-left slice-bar" id="bar-prev"></div>
+					<div class="fa-solid fa-chevron-right slice-bar" id="bar-next"></div>
+				</div>
+				<div class="carousel-nav flex gap-2">
+					<div class="dot"></div>
+					<div class="dot"></div>
+					<div class="dot"></div>
+				</div>
 			</div>
 		</div>
 		<div class="good-points adjust-border-content light-blue-background">
