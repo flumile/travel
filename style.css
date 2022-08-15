@@ -14,9 +14,9 @@
 .suggest-trip-img {
 	width: 100%;
 	min-width: 70%;
-	height: auto;
 	filter: brightness(0.8);
-	position: relative;
+	position: absolute;
+	z-index: -1;
 }
 
 .suggest-trip-bg {
@@ -61,8 +61,28 @@
 
 .button-to-detail {
 	padding: 1rem 2rem;
-	background-color: rgb(23, 103, 103);
+	background-color: rgb(72 146 231);
 	width: fit-content;
+	border-radius: 4px;
+	font-weight: 600;
+	font-size: 14px;
+	margin-top: 1rem;
+}
+
+.button-to-detail:hover {
+	background-color: rgb(71 113 231);
+	color: white;
+}
+
+.button-to-detail-white {
+	padding: 1rem 2rem;
+	background-color: white;
+	width: fit-content;
+	border-radius: 4px;
+	font-weight: 600;
+	font-size: 14px;
+	margin-top: 1rem;
+	color: black;
 }
 
 .good-points {
@@ -92,7 +112,15 @@
 
 .package-detail.detail-text {
 	width: 60%;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
 }
+
+.package-detail-topic {
+	line-height: 1.2;
+}
+
 .package {
 	width: 20rem;
 	height: 21rem;
@@ -154,11 +182,30 @@
 	width: 250px;
 	height: 240px;
 	overflow: hidden;
+	position: relative;
 }
 
-.article-img:hover {
+.article-img-hover {
 	transform: scale(1.1);
 	filter: brightness(0.7);
+}
+
+.article-text {
+	position: absolute;
+	bottom: 20%;
+	left: 50%;
+	transform: translate(-50%, 20%);
+	display: none;
+	color: white;
+	cursor: pointer;
+	text-align: center;
+}
+
+.show-article {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	justify-items: center;
 }
 
 .logo-travel-tour {
@@ -258,14 +305,14 @@
 .strength {
 	display: flex;
 	align-items: center;
-	gap: 2rem;
+	gap: 1.5rem;
 	width: 60%;
 }
 
 .my-strengths {
 	display: flex;
 	background-color: rgb(70, 130, 232);
-	gap: 2.3rem;
+	gap: 3rem;
 }
 
 .book-with-us {
@@ -437,7 +484,6 @@
 	position: absolute;
 	left: 50%;
 	bottom: 5%;
-	width: 100%;
 }
 
 .dot {
@@ -445,14 +491,16 @@
 	cursor: pointer;
 	width: 15px;
 	height: 15px;
-	background-color: aquamarine;
+	background-color: #a6a3a3;
+	filter: opacity(0.4);
 	transform: translate(-150%, 5%);
 	transition: background-color 0.3s;
 }
 
 .dot-active,
 .dot:hover {
-	background-color: #717171;
+	background-color: #efefef;
+	filter: opacity(1);
 }
 
 .carousel-slice {
@@ -467,5 +515,19 @@
 .slice-bar {
 	transform: scale(3);
 	cursor: pointer;
+	color: white;
+}
+
+.slice-bar:hover {
 	color: #efefef;
+}
+
+.button-discount-detail {
+	padding: 1rem 2rem;
+	font-weight: 500;
+	font-size: 14px;
+}
+
+.button-discount-detail:hover {
+	color: rgb(72 143 231);
 }

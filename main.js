@@ -65,3 +65,23 @@ if (carousel != null) {
 		dots[carousel_number].className += " dot-active"
 	}
 }
+
+const articles = document.querySelectorAll(".article")
+articles.forEach((article) => {
+	const text = article.querySelector(".article-text")
+	const img = article.querySelector(".article-img")
+	article.addEventListener("mouseover", () => {
+		text.classList.add("show-article")
+		img.classList.add("article-img-hover")
+	})
+	article.addEventListener("mouseout", () => {
+		img.classList.remove("article-img-hover")
+		text.classList.remove("show-article")
+	})
+})
+
+const destinations = document.querySelectorAll(".destination")
+console.log(destinations)
+destinations.forEach((destination) => {
+	console.log(destination)
+})
