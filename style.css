@@ -121,11 +121,21 @@
 	line-height: 1.2;
 }
 
+.packages {
+	display: grid;
+	grid-template-columns: auto auto auto;
+}
+
 .package {
 	width: 20rem;
 	height: 21rem;
 	background-color: white;
 	position: relative;
+	display: none;
+}
+
+.show-package {
+	display: block;
 }
 
 .discount {
@@ -530,4 +540,64 @@
 
 .button-discount-detail:hover {
 	color: rgb(72 143 231);
+}
+
+.destination-hover {
+	filter: brightness(0.3);
+}
+
+.destination-view-tour {
+	color: rgb(70, 127, 231);
+	font-size: 12px;
+	font-weight: 800;
+	display: none;
+}
+
+.destination:hover .destination-text {
+	transform: translateY(-10px);
+}
+
+.destination:hover .bar-box {
+	transform: translateY(0px);
+}
+
+.destination-text {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	transform: translateY(10px);
+	transition: transform 0.3s;
+}
+
+.view-tour {
+	display: block;
+}
+
+.bar-box {
+	width: 100%;
+	height: 5px;
+	background-color: rgb(70, 127, 231);
+	position: absolute;
+	bottom: 0;
+	transform: translateY(5px);
+	transition: transform 0.3s;
+}
+
+.slice-bar-pk {
+	padding: 1.5rem;
+	transform: scale(1);
+	background-color: rgb(70, 130, 232);
+	color: #efefef;
+}
+
+.package-slice-bar {
+	position: absolute;
+	left: 0%;
+	top: 70%;
+	transform: translate(0%, -70%);
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
 }
