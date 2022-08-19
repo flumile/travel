@@ -103,7 +103,6 @@ if (packages != null) {
 	setSliceBar()
 
 	function showSlice(n) {
-		console.log(n)
 		if (n > packageTour.length - 2) {
 			sliceIndex = 1
 		}
@@ -118,10 +117,6 @@ if (packages != null) {
 		packageTour[n].classList.add("show-package")
 		packageTour[n + 1].classList.add("show-package")
 		packageTour[n + 2].classList.add("show-package")
-		console.log("hello")
-		packageTour.forEach((trip) => {
-			console.log(trip)
-		})
 	}
 
 	function DisplayNone() {
@@ -143,13 +138,11 @@ if (packages != null) {
 
 	function prevSlice(n) {
 		sliceIndex = n - 1
-		console.log(sliceIndex)
 		showSlice(sliceIndex)
 	}
 
 	function nextSlice(n) {
 		sliceIndex = n + 1
-		console.log(sliceIndex)
 		showSlice(sliceIndex)
 	}
 }

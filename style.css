@@ -108,10 +108,11 @@
 .package-img {
 	width: 20rem;
 	height: auto;
+	cursor: pointer;
 }
 
 .package-detail.detail-text {
-	width: 60%;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
@@ -169,11 +170,19 @@
 .destination {
 	height: 350px;
 	overflow: hidden;
+	width: 100%;
 }
 
 .destination-img {
 	width: 100%;
 	height: auto;
+	filter: brightness(0.8);
+}
+
+.destination-country {
+	color: #efefef;
+	font-weight: 700;
+	font-size: 18px;
 }
 
 .icon-img {
@@ -273,7 +282,6 @@
 	height: 80px;
 	position: relative;
 	object-fit: contain;
-	transition: transform 0.5s;
 }
 
 .country-img {
@@ -281,11 +289,11 @@
 	min-height: 80px;
 	object-fit: cover;
 	filter: brightness(0.65);
+	transition: transform 0.5s;
 }
 
-.country:hover {
+.country:hover .country-img {
 	transform: scale(1.15);
-	font-size: 14px;
 }
 
 .country-text {
