@@ -106,13 +106,15 @@
 }
 
 .package-img {
-	width: 20rem;
-	height: auto;
+	width: 320px;
+	height: 220px;
+	object-fit: cover;
 	cursor: pointer;
 }
 
 .package-detail.detail-text {
 	height: 100%;
+	width: 80%;
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
@@ -128,8 +130,8 @@
 }
 
 .package {
-	width: 20rem;
-	height: 21rem;
+	width: 320px;
+	height: 405px;
 	background-color: white;
 	position: relative;
 	display: none;
@@ -575,7 +577,7 @@
 	gap: 1rem;
 	padding-left: 1rem;
 	padding-right: 1rem;
-	transform: translateY(10px);
+	transform: translateY(0px);
 	transition: transform 0.3s;
 }
 
@@ -635,4 +637,10 @@
 
 .input-email::placeholder {
 	color: #757575;
+}
+
+.topic {
+	display: flex;
+	gap: 1.5rem;
+	align-items: center;
 }
