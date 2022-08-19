@@ -609,3 +609,30 @@
 	display: flex;
 	justify-content: space-between;
 }
+
+.topic-addition {
+	color: rgb(70, 127, 231);
+	cursor: pointer;
+}
+
+.topic-addition:hover {
+	color: rgb(132, 167, 232);
+}
+
+.activity {
+	color: rgb(70, 127, 231);
+}
+
+.activity:hover {
+	color: rgb(132, 167, 232);
+}
+
+.input-email {
+	padding: 1rem 1.5rem;
+	background-color: rgb(244, 244, 244);
+	color: rgb(117, 117, 117);
+}
+
+.input-email::placeholder {
+	color: #757575;
+}

@@ -510,7 +510,9 @@
 				<i class="fa-solid fa-map-pin topic-logo"></i>
 				<div class="flex items-baseline gap-4">
 					<div class="text-3xl">Popular Destinations</div>
-					<button class="text-blue-600">/ View All Destinations</button>
+					<div class="topic-addition">
+						<span>/</span> <span>See All Destinations</span>
+					</div>
 				</div>
 			</div>
 			<div class="text-gray-400 w-8/12">
@@ -618,14 +620,22 @@
 					<div class="text-2xl">Browse Tours By Activity</div>
 				</div>
 				<div class="justify-items-start activities">
-					<button class="text-blue-400">Outdoor Activites</button>
-					<button class="text-blue-400">City Tours</button>
-					<button class="text-blue-400">Cultural & Thematic Tours</button>
-					<button class="text-blue-400">Indulgence & Luxury Tours</button>
-					<button class="text-blue-400">Family Friendly Tours</button>
-					<button class="text-blue-400">Relaxation Tours</button>
-					<button class="text-blue-400">Holiday & Seasonal Tours</button>
-					<button class="text-blue-400">Wild & Adventure Tours</button>
+					<button class="activity" id="outdoor">Outdoor Activites</button>
+					<button class="activity" id="city">City Tours</button>
+					<button class="activity" id="calture">
+						Cultural & Thematic Tours
+					</button>
+					<button class="activity" id="luxury">
+						Indulgence & Luxury Tours
+					</button>
+					<button class="activity" id="family">Family Friendly Tours</button>
+					<button class="activity" id="relaxation">Relaxation Tours</button>
+					<button class="activity" id="seasonal">
+						Holiday & Seasonal Tours
+					</button>
+					<button class="activity" id="adventure">
+						Wild & Adventure Tours
+					</button>
 				</div>
 			</div>
 			<div class="letter w-5/12">
@@ -638,7 +648,7 @@
 					<input
 						type="email"
 						placeholder="Your Email Address"
-						class="bg-gray-200 p-4 rounded-full w-7/12"
+						class="rounded-full w-7/12 input-email"
 					/>
 					<button class="p-4 bg-blue-400 rounded-full text-white">
 						SUBSCRIBE
@@ -678,7 +688,9 @@
 				<i class="fa-regular fa-lightbulb topic-logo"></i>
 				<div class="flex items-baseline gap-4">
 					<div class="text-3xl">Travel Articles</div>
-					<button class="text-blue-600">/ See All Articles</button>
+					<div class="topic-addition">
+						<span>/</span> <span>See All Articles</span>
+					</div>
 				</div>
 				<div id="test-two"></div>
 			</div>
